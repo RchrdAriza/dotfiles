@@ -1,0 +1,19 @@
+x
+q
+colorscheme spotify
+colorscheme zenburn
+colorscheme jellybeans
+colorscheme jellybean
+colorscheme gruvbox
+colorscheme green
+colorscheme green-mono-88
+colorscheme gray-88
+colorscheme cyan
+colorscheme amazon
+colorscheme dracula
+colorscheme onedark
+bind -f common enter win-activate
+bind -f common 4 view queue
+shell !
+help
+add ./
