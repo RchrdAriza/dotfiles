@@ -16,8 +16,11 @@
     "cpu",
     "memory",
     "pulseaudio",
+    "pulseaudio#microphone",
+    "custom/caps-lock",
     "battery",
-    "tray"
+    "tray",
+    "custom/power"
   ],
 
   "hyprland/workspaces": {
@@ -52,14 +55,27 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "󰖁",
     "on-click": "pavucontrol",
     "format-icons": {
       "default": ["", "", ""]
     }
   },
-
+  "pulseaudio#microphone": {
+  "format": "{format_source}",
+  "format-source": " {volume}%",
+  "format-source-muted": "󰍭",
+  "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+  "tooltip-format": "{source_desc}",
+  "scroll-step": 5
+  },
+  "custom/caps-lock": {
+  "format": "{}",
+  "interval": 1,
+  "exec": "~/.config/waybar/scripts/caps-lock.sh",
+  "return-type": "json"
+  },
   "battery": {
     "format": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""]
@@ -67,6 +83,12 @@
 
   "tray": {
     "spacing": 6
-  }
+  },
+  "custom/power": {
+  "format": "⏻",
+  "tooltip": "Power menu",
+  "on-click": "wlogout"
+}
+
 }
 
