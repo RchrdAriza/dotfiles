@@ -2,9 +2,10 @@
   "layer": "top",
   "position": "top",
   "height": 20,
-  "spacing": 1,
+  "spacing": 0,
 
   "modules-left": [
+    "custom/launcher",
     "hyprland/workspaces"
   ],
 
@@ -13,7 +14,6 @@
   ],
 
   "modules-right": [
-    "cpu",
     "memory",
     "pulseaudio",
     "pulseaudio#microphone",
@@ -23,6 +23,12 @@
     "tray",
     "custom/power"
   ],
+
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "wofi --show drun",
+    "tooltip-format": "Application launcher"
+  },
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -51,10 +57,6 @@
     "on-click-right": "gnome-calendar"
   },
 
-  "cpu": {
-    "format": "  {usage}%",
-    "tooltip": false
-  },
 
   "memory": {
     "format": "󰍛  {used:0.1f}G",
@@ -86,6 +88,7 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "{percent}% {icon}",
+    "tooltip-format": "Backlight",
     "format-icons": ["", ""]
   },
   "battery": {
@@ -98,7 +101,7 @@
   },
   "custom/power": {
   "format": "⏻",
-  "tooltip": "Power menu",
+  "tooltip-format": "Power menu",
   "on-click": "wlogout"
 }
 

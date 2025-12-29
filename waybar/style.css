@@ -20,8 +20,8 @@ window#waybar {
 #network,
 #battery,
 #tray {
-  padding: 6px 12px;
-  margin: 6px 4px;
+  padding: 3px 8px;
+  margin: 3px 2px;
   background: rgba(255, 255, 255, 0.06);
 }
 
@@ -68,16 +68,16 @@ window#waybar {
 
 /* POWER */
 #custom-power {
-  padding: 6px 12px;
-  margin: 6px 4px;
+  padding: 3px 8px;
+  margin: 3px 2px;
   background: rgba(255, 255, 255, 0.06);
 }
 
 
 /* CAPS LOCK */
 #custom-caps-lock {
-  padding: 6px 12px;
-  margin: 6px 4px;
+  padding: 3px 8px;
+  margin: 3px 2px;
   background: rgba(255, 255, 255, 0.06);
 }
 
@@ -94,7 +94,12 @@ window#waybar {
 
 /* Backlight */
 #backlight {
-  padding: 6px 12px;
-  margin: 6px 4px;
+  padding: 3px 8px;
+  margin: 3px 2px;
+  background: rgba(255, 255, 255, 0.06);
+}
+#custom-launcher {
+  padding: 3px 8px;
+  margin: 3px 2px;
   background: rgba(255, 255, 255, 0.06);
 }
