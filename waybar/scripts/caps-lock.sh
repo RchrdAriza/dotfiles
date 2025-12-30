@@ -1,21 +1,30 @@
 #!/bin/bash
 
+ID=1478
+
 CAPS_STATE=$(hyprctl devices -j | jq -r '.keyboards[]? | select(.main == true) | .capsLock' 2>/dev/null)
 STATE_FILE="/tmp/caps-lock-state"
 
 PREV_STATE=$(cat "$STATE_FILE" 2>/dev/null)
 
-echo "$CAPS_STATE" > "$STATE_FILE"
+echo "$CAPS_STATE" >"$STATE_FILE"
 
 # Solo notificar si cambió el estado
 if [[ "$CAPS_STATE" != "$PREV_STATE" ]]; then
   if [[ "$CAPS_STATE" == "true" ]]; then
-    notify-send -a "caps-lock" "Caps Lock" "Activado"
+    notify-send \
+      -a "caps-lock" \
+      -r "$ID" \
+      "Caps Lock" \
+      "Activado"
   else
-    notify-send -a "caps-lock" "Caps Lock" "Desactivado"
+    notify-send \
+      -a "caps-lock" \
+      -r "$ID" \
+      "Caps Lock" \
+      "Desactivado"
   fi
 fi
-
 
 if [[ "$CAPS_STATE" == "true" ]]; then
   echo '{"text": "󰪛", "class": "caps-on", "tooltip": "Caps Lock activo"}'

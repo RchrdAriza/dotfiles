@@ -374,6 +374,13 @@ foreground = "#eceff4"
 timeout = 2
 format = "%s\n%b"
 
+[brightness-level]
+appname = "brightness-level"
+background = "#2e3440"
+foreground = "#eceff4"
+timeout = 1
+format = "%s\n%b"
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #
