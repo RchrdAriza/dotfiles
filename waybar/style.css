@@ -20,7 +20,6 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery,
-#custom-power,
 #custom-caps-lock,
 #backlight,
 #custom-launcher,
@@ -55,7 +54,7 @@ window#waybar {
 
 /* AUDIO */
 #pulseaudio.muted {
-  color: #888;
+  color: #aaaaaa;
 }
 
 /* BATTERY */
@@ -85,10 +84,13 @@ window#waybar {
   background: transparent;
 }
 
-/*
-#custom-cava {
-  color: #fab387;
-  padding-right: 5px;
-  letter-spacing: -5px;
+#custom-power {
+  padding: 3px 8px;
+  margin: 3px 2px;
+  margin-right: 5px;
+  background: rgba(255, 255, 255, 0.187);
 }
-*/
+
+#custom-launcher {
+  margin-left: 5px;
+}
