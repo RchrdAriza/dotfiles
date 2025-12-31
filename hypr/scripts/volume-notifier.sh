@@ -9,4 +9,5 @@ notify-send \
   -a "volume-level" \
   -r "$ID" \
   "Volume" \
+  -h int:value:"$VOLUME_LEVEL" \
   "$VOLUME_LEVEL"
