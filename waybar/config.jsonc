@@ -10,7 +10,8 @@
   ],
 
   "modules-center": [
-    "clock"
+    "clock",
+    "custom/cava"
   ],
 
   "modules-right": [
@@ -56,7 +57,11 @@
     "tooltip-format": "  {:%A %d %B %Y}",
     "on-click-right": "gnome-calendar"
   },
-
+    "custom/cava": {
+    "format": "{text}",
+    "exec": "~/.config/waybar/scripts/cava-module.py",
+    "return-type": "json"
+  },
 
   "memory": {
     "format": "󰍛  {used:0.1f}G",
@@ -103,7 +108,7 @@
   "format": "⏻",
   "tooltip-format": "Power menu",
   "on-click": "wlogout"
-}
+  },
 
 }
 
