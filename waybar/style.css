@@ -9,6 +9,7 @@
 window#waybar {
   background: rgba(20, 20, 20, 0.55);
   color: #eaeaea;
+  margin: 5px 10px 0 10px; /* arriba, derecha, abajo, izquierda */
 }
 
 /* GENERAL MODULE STYLE */
@@ -27,14 +28,14 @@ window#waybar {
 #tray {
   padding: 3px 8px;
   margin: 3px 2px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.187);
 }
 
 /* WORKSPACES */
 #workspaces button {
   padding: 4px 8px;
   margin: 0 2px;
-  color: #888;
+  color: #aaaaaa;
   background: transparent;
 }
 

@@ -63,11 +63,11 @@ def run():
                 bar_map[min(int((i / bytenorm) * 8), 8)] 
                 for i in struct.unpack(fmt, data)
             ])            
-            output = {
-                "text": sample,
-            }
 
-            print(json.dumps(output), flush=True)
+            if sum(struct.unpack(fmt, data)) == 0:
+                print(json.dumps({"text": "", "class": "hidden"}), flush=True)
+            else:
+                print(json.dumps({"text": sample, "class": "active"}), flush=True)
 
 if __name__ == "__main__":
     run()
