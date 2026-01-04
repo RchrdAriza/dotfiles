@@ -340,6 +340,10 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
+[general_sound]
+summary = "*"
+script = ~/.config/hypr/scripts/alert.sh
+
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
