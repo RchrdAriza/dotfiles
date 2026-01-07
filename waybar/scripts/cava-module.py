@@ -17,6 +17,9 @@ conpat = """
 [general]
 bars = %d
 sensitivity = %d
+[input]
+method = pulse
+source = auto
 [output]
 method = raw
 raw_target = %s
