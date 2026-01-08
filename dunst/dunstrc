@@ -342,7 +342,7 @@
 
 [general_sound]
 summary = "*"
-script = ~/.config/hypr/scripts/alert.sh
+script = ~/.config/hypr/scripts/alert.py
 
 
 [urgency_low]
