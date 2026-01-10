@@ -24,6 +24,7 @@ window#waybar {
 #backlight,
 #custom-launcher,
 #custom-cava,
+#mpris,
 #tray {
   padding: 3px 8px;
   margin: 3px 2px;
@@ -94,3 +95,4 @@ window#waybar {
 #custom-launcher {
   margin-left: 5px;
 }
+

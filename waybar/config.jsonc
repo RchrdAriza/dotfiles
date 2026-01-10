@@ -7,16 +7,9 @@
   "margin-left": 10,
   "margin-right": 10,
 
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "mpris"],
 
-  "modules-left": [
-    "custom/launcher",
-    "hyprland/workspaces"
-  ],
-
-  "modules-center": [
-    "clock",
-    "custom/cava"
-  ],
+  "modules-center": ["clock", "custom/cava"],
 
   "modules-right": [
     "memory",
@@ -48,7 +41,8 @@
       "6": "󰂺",
       "urgent": "",
       "focused": "",
-      "default": ""    },
+      "default": ""
+    },
     "persistent-workspaces": {
       "1": [],
       "2": [],
@@ -58,13 +52,26 @@
       "6": []
     }
   },
+  "mpris": {
+    "format": "{artist} - {title}",
+    "tooltip-format": "{album}",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "format-paused": " {artist} - {title}",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "max-length": 35
+  },
 
   "clock": {
     "format": "  {:%H:%M}",
     "tooltip-format": "  {:%A %d %B %Y}",
     "on-click-right": "gnome-calendar"
   },
-    "custom/cava": {
+  "custom/cava": {
     "format": "{text}",
     "hide-empty-text": true,
     "exec": "~/.config/waybar/scripts/cava-module.py",
@@ -85,18 +92,18 @@
     }
   },
   "pulseaudio#microphone": {
-  "format": "{format_source}",
-  "format-source": " {volume}%",
-  "format-source-muted": "󰍭",
-  "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-  "tooltip-format": "{source_desc}",
-  "scroll-step": 5
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "󰍭",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "tooltip-format": "{source_desc}",
+    "scroll-step": 5
   },
   "custom/caps-lock": {
-  "format": "{}",
-  "interval": 1,
-  "exec": "~/.config/waybar/scripts/caps-lock.sh",
-  "return-type": "json"
+    "format": "{}",
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/caps-lock.sh",
+    "return-type": "json"
   },
   "backlight": {
     "device": "intel_backlight",
@@ -113,10 +120,8 @@
     "spacing": 6
   },
   "custom/power": {
-  "format": "⏻",
-  "tooltip-format": "Power menu",
-  "on-click": "wlogout"
+    "format": "⏻",
+    "tooltip-format": "Power menu",
+    "on-click": "wlogout"
   }
-
 }
-
