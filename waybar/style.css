@@ -96,3 +96,8 @@ window#waybar {
   margin-left: 5px;
 }
 
+#mpris.stopped {
+  /* Estilo cuando está detenido (a veces puede ocultarse) */
+  background: transparent;
+  color: transparent;
+}
