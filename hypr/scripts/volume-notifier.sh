@@ -7,7 +7,7 @@ VOLUME_LEVEL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)
 # echo $VOLUME_LEVEL
 notify-send \
   -a "volume-level" \
-  -r "$ID" \
-  "Volume" \
+  -h string:x-canonical-private-synchronous:vol_notify \
   -h int:value:"$VOLUME_LEVEL" \
+  "Volume" \
   "$VOLUME_LEVEL"

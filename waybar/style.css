@@ -25,6 +25,7 @@ window#waybar {
 #custom-launcher,
 #custom-cava,
 #mpris,
+#custom-notification,
 #tray {
   padding: 3px 8px;
   margin: 3px 2px;
@@ -105,4 +106,7 @@ window#waybar {
 #mpris.spotify {
   color: #1ed760;
   background: rgba(30, 215, 96, 0.15);
+}
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
 }
