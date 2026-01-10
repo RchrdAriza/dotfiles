@@ -101,3 +101,8 @@ window#waybar {
   background: transparent;
   color: transparent;
 }
+
+#mpris.spotify {
+  color: #1ed760;
+  background: rgba(30, 215, 96, 0.15);
+}
