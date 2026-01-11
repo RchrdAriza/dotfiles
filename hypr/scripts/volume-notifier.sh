@@ -9,5 +9,6 @@ notify-send \
   -a "volume-level" \
   -h string:x-canonical-private-synchronous:vol_notify \
   -h int:value:"$VOLUME_LEVEL" \
+  -h boolean:transient:true \
   "Volume" \
   "$VOLUME_LEVEL"

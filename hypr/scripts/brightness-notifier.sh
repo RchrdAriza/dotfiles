@@ -12,5 +12,6 @@ fi
 notify-send \
   -h string:x-canonical-private-synchronous:vol_notify \
   -h int:value:"$PERCENT" \
+  -h boolean:transient:true \
   "BRILLO" \
   "$PERCENT"

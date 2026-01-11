@@ -14,13 +14,15 @@ if [[ "$CAPS_STATE" != "$PREV_STATE" ]]; then
   if [[ "$CAPS_STATE" == "true" ]]; then
     notify-send \
       -a "caps-lock" \
-      -r "$ID" \
+      -h string:x-canonical-private-synchronous:vol_notify \
+      -h boolean:transient:true \
       "Caps Lock" \
       "Activado"
   else
     notify-send \
       -a "caps-lock" \
-      -r "$ID" \
+      -h string:x-canonical-private-synchronous:vol_notify \
+      -h boolean:transient:true \
       "Caps Lock" \
       "Desactivado"
   fi
