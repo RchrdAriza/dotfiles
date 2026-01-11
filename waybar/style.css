@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  background: rgba(20, 20, 20, 0.55);
+  background: transparent;
   color: #eaeaea;
   margin: 5px 10px 0 10px; /* arriba, derecha, abajo, izquierda */
 }
@@ -26,10 +26,11 @@ window#waybar {
 #custom-cava,
 #mpris,
 #custom-notification,
+#custom-power,
 #tray {
   padding: 3px 8px;
   margin: 3px 2px;
-  background: rgba(255, 255, 255, 0.187);
+  background: rgba(17, 5, 5, 0.626);
 }
 
 /* WORKSPACES */
@@ -90,7 +91,6 @@ window#waybar {
   padding: 3px 8px;
   margin: 3px 2px;
   margin-right: 5px;
-  background: rgba(255, 255, 255, 0.187);
 }
 
 #custom-launcher {
