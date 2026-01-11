@@ -18,23 +18,28 @@
     "image-visibility": "when-available",
     "transition-time": 200,
     "hide-on-clear": false,
-    
     "hide-on-action": true,
     "script-fail-notify": true,
     "scripts": {
-    "sound-script": {
-      "exec": "paplay ~/.config/swaync/notification.ogg",
-      "app-name": ".*"
-    }
-  },
+        "sound-script": {
+            "exec": "paplay ~/.config/swaync/notification.ogg",
+            "app-name": ".*"
+        }
+    },
     "widgets": [
         "mpris",
+        "title",
         "dnd",
         "notifications",
         "volume",
         "buttons-grid"
     ],
     "widget-config": {
+        "title": {
+            "text": "Notifications",
+            "clear-all-button": true,
+            "button-text": "Clear All"
+        },
         "dnd": {
             "text": "Do not disturb"
         },

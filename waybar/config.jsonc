@@ -64,7 +64,8 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 35
+    "max-length": 35,
+    "ignore-players": ["brave-browser"]
   },
 
   "clock": {
