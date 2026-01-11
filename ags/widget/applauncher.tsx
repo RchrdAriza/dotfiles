@@ -40,7 +40,7 @@ export default function Dock(monitor: Gdk.Monitor) {
             tooltipText={app.name}
             onClicked={() => execAsync(app.cmd)}
           >
-            <image iconName={app.icon} pixelSize={22} />
+            <image iconName={app.icon} pixelSize={30} />
           </button>
         ))}
       </box>
