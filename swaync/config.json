@@ -21,6 +21,12 @@
     
     "hide-on-action": true,
     "script-fail-notify": true,
+    "scripts": {
+    "sound-script": {
+      "exec": "paplay ~/.config/swaync/notification.ogg",
+      "app-name": ".*"
+    }
+  },
     "widgets": [
         "mpris",
         "dnd",
