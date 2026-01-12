@@ -11,7 +11,7 @@ type DockApp = {
 const apps: DockApp[] = [
   { name: "Browser", icon: "brave", cmd: "brave" },
   { name: "Files", icon: "org.gnome.Nautilus", cmd: "nautilus" },
-  { name: "Terminal", icon: "foot", cmd: "foot" },
+  { name: "Terminal", icon: "kitty", cmd: "kitty" },
   { name: "Spotify", icon: "spotify", cmd: "spotify" },
 ]
 
@@ -43,6 +43,17 @@ export default function Dock(monitor: Gdk.Monitor) {
             <image iconName={app.icon} pixelSize={30} />
           </button>
         ))}
+        { 
+          <button
+          class="dock-item config-button"
+          tooltipText="Settings"
+          onClicked={() => execAsync("holamundo").then(console.log)}
+        >
+          <image iconName="view-more-symbolic" pixelSize={30} / 
+          >
+
+          </button>
+        }
       </box>
     </window>
   )

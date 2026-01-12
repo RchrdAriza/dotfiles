@@ -9,6 +9,6 @@ app.start({
   main() {
     // app.get_monitors().map(Bar)
     app.get_monitors().map(Bart)
-    app.get_monitors().map(Keybinds)
+    // app.get_monitors().map(Keybinds)
   },
 })
