@@ -11,8 +11,9 @@ type DockApp = {
 const apps: DockApp[] = [
   { name: "Browser", icon: "brave", cmd: "brave" },
   { name: "Files", icon: "org.gnome.Nautilus", cmd: "nautilus" },
-  { name: "Terminal", icon: "kitty", cmd: "kitty" },
+  { name: "Terminal", icon: "kitty", cmd: `sh -c 'cd "$HOME" && exec kitty'` },
   { name: "Spotify", icon: "spotify", cmd: "spotify" },
+  { name: "Code", icon: "vscode", cmd: "code" },
 ]
 
 export default function Dock(monitor: Gdk.Monitor) {
