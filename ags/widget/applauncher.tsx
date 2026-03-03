@@ -9,16 +9,16 @@ type DockApp = {
 }
 
 const apps: DockApp[] = [
-  { name: "Browser", icon: "brave", cmd: "brave" },
+  { name: "Browser", icon: "brave-desktop", cmd: "brave" },
   { name: "Files", icon: "org.gnome.Nautilus", cmd: "nautilus" },
   { name: "Terminal", icon: "kitty", cmd: `sh -c 'cd "$HOME" && exec kitty'` },
   { name: "Spotify", icon: "spotify", cmd: "spotify" },
-  { name: "Code", icon: "vscode", cmd: "code" },
+  { name: "Code", icon: "visual-studio-code", cmd: "code" },
 ]
 
 export default function Dock(monitor: Gdk.Monitor) {
   const { BOTTOM } = Astal.WindowAnchor
-  const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
+  // const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
   return (
     <window
@@ -33,7 +33,7 @@ export default function Dock(monitor: Gdk.Monitor) {
       visible
     >
       <box class="dock-box" spacing={8}
-      halign={Gtk.Align.CENTER}
+        halign={Gtk.Align.CENTER}
       >
         {apps.map((app) => (
           <button
@@ -44,14 +44,14 @@ export default function Dock(monitor: Gdk.Monitor) {
             <image iconName={app.icon} pixelSize={30} />
           </button>
         ))}
-        { 
+        {
           <button
-          class="dock-item config-button"
-          tooltipText="Settings"
-          onClicked={() => execAsync("holamundo").then(console.log)}
-        >
-          <image iconName="view-more-symbolic" pixelSize={30} / 
+            class="dock-item config-button"
+            tooltipText="Settings"
+            onClicked={() => execAsync("holamundo").then(console.log)}
           >
+            <image iconName="view-more-symbolic" pixelSize={30} /
+            >
 
           </button>
         }
