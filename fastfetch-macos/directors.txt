@@ -1,0 +1,7 @@
+# Un director por línea. Las líneas con # se ignoran.
+Paul Thomas Anderson
+Stanley Kubrick
+Wim Wenders
+Christopher Nolan
+Wong Kar-wai
+Gregg Araki
